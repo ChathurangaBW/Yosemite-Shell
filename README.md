@@ -1,4 +1,4 @@
-Yosemite-Shell
+Yosemite Shell
 ==============
 
 OSX like GNOME Shell Theme 
