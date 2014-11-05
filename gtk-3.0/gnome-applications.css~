@@ -283,7 +283,6 @@ GeditStatusMenuButton.button:hover,
 GeditStatusMenuButton.button:active,
 GeditStatusMenuButton.button:active:hover {
     border-color: @borders;
-color: @theme_text_color;
 }
 
 GeditStatusbar GeditSmallButton.button:active,
@@ -292,7 +291,7 @@ GeditStatusMenuButton.button:active {
                                       @borders,
                                       shade(@theme_bg_color, 0.95));
     background-color: transparent;
-color: @theme_text_color;
+    color: @theme_selected_fg_color;
     text-shadow: 0 1px @button_text_shadow;
 }
 

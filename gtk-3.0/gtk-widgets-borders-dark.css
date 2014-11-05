@@ -1,9 +1,41 @@
 /* Borders */
 
+.header-bar .button.flat,
+.header-bar .button.flat:backdrop,
+.header-bar .button.flat:active,
+.header-bar .button.flat:insensitive:backdrop,
+.header-bar .button.flat:hover,
+.header-bar .button.flat:active:hover,
+.titlebar .titlebutton:backdrop:hover,
+.titlebar .titlebutton:backdrop,
+.button.app,
+.action-bar .button,
+.action-bar .button:backdrop,
+.header-bar .linked .button,
+
+.header-bar .button.raised.linked,
+.header-bar .raised.linked .button,
 
 
+.header-bar .button:insensitive,
+.header-bar .button:insensitive:hover,
+.header-bar .button:active,
 
- .button.flat:backdrop:insensitive,
+.header-bar .button:active:hover,
+.header-bar .button,
+
+.header-bar .button:hover,
+.search-bar .entry:focus:hover,
+.search-bar .entry:focus,
+.search-bar .entry:active:hover:backdrop,
+.search-bar .entry:hover:backdrop,
+.search-bar .entry:active:backdrop,
+.search-bar .entry:backdrop,
+.search-bar .entry:active:hover,
+.search-bar .entry:hover,
+.search-bar .entry:active,
+.search-bar .entry,
+ .button.flat:insensitive:backdrop,
  .button.flat:insensitive,
  .button.flat:active:insensitive,
  .button.flat:hover:insensitive,
@@ -32,13 +64,18 @@
 .header-bar .entry:active:hover,
 .header-bar .entry:hover,
 .header-bar .entry:active,
-.header-bar .entry {
-    border-image: none;
-    border-radius: 3px;
+.header-bar .entry
 
-    border-style: solid;
-    border-color: transparent;
+
+ {
+    border-image: none;
+    border-radius: 4px;
+
+    border-style: none;
+    border-color: none;
+
 }
+
 
 
 /* generic element borders */
@@ -245,6 +282,13 @@ column-header:last-child .button:backdrop {
 .selection-mode.toolbar .suggested-action.button:backdrop, 
 .selection-mode.toolbar GtkToolButton.suggested-action .button:backdrop,
 .button:backdrop,
+.header-bar .button:active:backdrop:hover,
+.header-bar .button:backdrop:active,
+.header-bar .button:active:backdrop,
+.header-bar .button:backdrop,
+.header-bar .button:backdrop:insensitive,
+.header-bar .button:backdrop:hover,
+.header-bar .button:insensitive:backdrop,
 .spinbutton.vertical .button:backdrop,
 GtkComboBox.combobox-entry .entry:backdrop,
 GtkComboBox.combobox-entry .button:backdrop,

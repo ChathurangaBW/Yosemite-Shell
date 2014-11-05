@@ -1,36 +1,29 @@
 /* Borders */
 
-
-.titlebar .titlebutton:backdrop:hover,
-.titlebar .titlebutton:backdrop,
-.header-bar .button.raised:active,
-.header-bar .raised .button:active,
-.header-bar .button.raised:insensitive,
-.header-bar .raised .button:insensitive,
-.header-bar .button.raised.default:insensitive,
-.header-bar .raised .button.default:insensitive,
-.header-bar.toolbar .button.default:insensitive,
-
-.header-bar GtkComboBox .button:active,
-.header-bar GtkComboBox .button:insensitive, 
-
 .header-bar .button.flat,
 .header-bar .button.flat:backdrop,
 .header-bar .button.flat:active,
 .header-bar .button.flat:insensitive:backdrop,
 .header-bar .button.flat:hover,
 .header-bar .button.flat:active:hover,
+.titlebar .titlebutton:backdrop:hover,
+.titlebar .titlebutton:backdrop,
 .button.app,
 .action-bar .button,
 .action-bar .button:backdrop,
+.header-bar .linked .button,
+.header-bar .linked .button:backdrop,
+.header-bar .button.raised.linked,
+.header-bar .raised.linked .button,
+
 .header-bar .button:insensitive:backdrop,
 .header-bar .button:insensitive,
 .header-bar .button:insensitive:hover,
 .header-bar .button:active,
-
+.header-bar .button:active:backdrop,
 .header-bar .button:active:hover,
 .header-bar .button,
-
+.header-bar .button:backdrop,
 .header-bar .button:hover,
 .search-bar .entry:focus:hover,
 .search-bar .entry:focus,
@@ -71,37 +64,44 @@
 .header-bar .entry:active:hover,
 .header-bar .entry:hover,
 .header-bar .entry:active,
-.header-bar .entry {
+.header-bar .entry
+
+
+ {
     border-image: none;
     border-radius: 4px;
 
-    border-style: solid;
-    border-color: transparent;
+    border-style: none;
+    border-color: none;
 
 }
+
 
 
 /* generic element borders */
 .entry,
 GtkComboBox.combobox-entry .entry,
 GtkComboBox.combobox-entry .button,
-
+.button:active,
 .button:insensitive,
 .button.default:insensitive,
 .spinbutton.vertical .button:active,
 .spinbutton.vertical .button:insensitive,
 .inline-toolbar.toolbar.vertical .button:active,
 .inline-toolbar.toolbar.vertical .button:insensitive,
-.inline-toolbar.toolbar.vertical .button.default:insensitive {
-    border-image: -gtk-scaled (url("borders/generic-border-backdrop.png"),url("borders/generic-border-backdrop@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+.inline-toolbar.toolbar.vertical .button.default:insensitive,
+.trough.highlight,
+.titlebar .titlebutton:hover, 
+.titlebar .titlebutton:active {
+    border-image: -gtk-scaled(url("borders/generic-border-dark.png"),url("borders/generic-border-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
-    border-color: #000;
+    border-color: transparent;
 }
 
 .trough row {
-    border-image: -gtk-scaled (url("borders/nohl-generic-border.png"),url("borders/nohl-generic-border@2.png")) 3 / 3px stretch;
+    border-image: -gtk-scaled (url("borders/nohl-generic-border-dark.png"),url("borders/nohl-generic-border-dark@2.png")) 3 / 3px stretch;
     border-radius: 3px;
     border-width: 1px;
     border-style: solid;
@@ -111,20 +111,10 @@ GtkComboBox.combobox-entry .button,
 /* focused element borders */
 .entry:focus,
 GtkComboBox.combobox-entry .entry:focus,
-
-.inline-toolbar.toolbar.vertical .button.default:active { 
-    border-image: -gtk-scaled(url("borders/generic-border.png"),url("borders/generic-border@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
-    border-radius: 3px;
-    border-width: 1px 1px 2px 1px;
-    border-style: solid;
-    border-color: transparent;
-}
-
-
-.button:active,
-
-.button.default:active { 
-    border-image: -gtk-scaled(url("borders/generic-border-dark2.png"),url("borders/generic-border-dark@22.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+.button.default:active,
+.inline-toolbar.toolbar.vertical .button.default:active
+ { 
+    border-image: -gtk-scaled(url("borders/generic-border-focused-dark.png"),url("borders/generic-border-focused-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -133,10 +123,9 @@ GtkComboBox.combobox-entry .entry:focus,
 
 /* generic button borders */
 .button,
-
 .spinbutton.vertical .button,
 .inline-toolbar.toolbar.vertical .button {
-    border-image: -gtk-scaled(url("borders/generic-border-dark22.png"),url("borders/generic-border-dark@222.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled(url("borders/button-border-dark.png"),url("borders/button-border-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -145,7 +134,7 @@ GtkComboBox.combobox-entry .entry:focus,
 
 /* focused button borders */
 .button.default { 
-    border-image: -gtk-scaled(url("borders/button-border-default.png"),url("borders/button-border-default@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled(url("borders/button-border-default-dark.png"),url("borders/button-border-default-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -155,7 +144,7 @@ GtkComboBox.combobox-entry .entry:focus,
 /* tooltip elements borders */
 .tooltip .entry,
 .tooltip .button {
-    border-image: -gtk-scaled (url("borders/tooltip-generic-border.svg"),url("borders/tooltip-generic-border@2.png")) 3 / 3px stretch;
+    border-image: -gtk-scaled (url("borders/tooltip-generic-border-dark.svg"),url("borders/tooltip-generic-border-dark@2.png")) 3 / 3px stretch;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
@@ -163,7 +152,7 @@ GtkComboBox.combobox-entry .entry:focus,
 
 /* tooltip focused elements borders */
 .tooltip .entry:focus {
-    border-image: -gtk-scaled (url("borders/tooltip-generic-border-focused.svg"),url("borders/tooltip-generic-border-focused@2.png")) 3 / 3px stretch;
+    border-image: -gtk-scaled (url("borders/tooltip-generic-border-focused-dark.svg"),url("borders/tooltip-generic-border-focused-dark@2.png")) 3 / 3px stretch;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
@@ -183,9 +172,12 @@ GtkComboBox.combobox-entry .entry:focus,
 .inline-toolbar.toolbar .button.default:insensitive,
 .inline-toolbar.toolbar .button:active,
 .inline-toolbar.toolbar .button:insensitive,
+.primary-toolbar GtkSwitch.trough,
+.primary-toolbar GtkSwitch.trough:insensitive,
+.primary-toolbar GtkSwitch.trough:active:insensitive,
 .primary-toolbar GtkComboBox .button:active,
 .primary-toolbar GtkComboBox .button:insensitive {
-    border-image: -gtk-scaled(url("borders/primary-toolbar-generic-border.png"),url("borders/primary-toolbar-generic-border@2.png")) 4 / 4px stretch;
+    border-image: -gtk-scaled(url("borders/primary-toolbar-generic-border-dark.png"),url("borders/primary-toolbar-generic-border-dark@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -198,7 +190,7 @@ GtkComboBox.combobox-entry .entry:focus,
 .primary-toolbar .button.raised.default:active,
 .primary-toolbar .raised .button.default:active,
 .inline-toolbar.toolbar .button.default:active {
-    border-image: -gtk-scaled(url("borders/primary-toolbar-generic-border-focused.png"),url("borders/primary-toolbar-generic-border-focused@2.png")) 4 / 4px stretch;
+    border-image: -gtk-scaled(url("borders/primary-toolbar-generic-border-focused-dark.png"),url("borders/primary-toolbar-generic-border-focused-dark@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -210,7 +202,7 @@ GtkComboBox.combobox-entry .entry:focus,
 .primary-toolbar .raised .button,
 .inline-toolbar.toolbar .button,
 .primary-toolbar GtkComboBox .button {
-    border-image: -gtk-scaled(url("borders/primary-toolbar-button-border.png"),url("borders/primary-toolbar-button-border@2.png")) 4 / 4px stretch;
+    border-image: -gtk-scaled(url("borders/primary-toolbar-button-border-dark.png"),url("borders/primary-toolbar-button-border-dark@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -221,13 +213,12 @@ GtkComboBox.combobox-entry .entry:focus,
 .primary-toolbar .button.raised.default,
 .primary-toolbar .raised .button.default,
 .inline-toolbar.toolbar .button.default {
-    border-image: -gtk-scaled(url("borders/primary-toolbar-button-border-default.png"),url("borders/primary-toolbar-button-border-default@2.png")) 4 / 4px stretch;
+    border-image: -gtk-scaled(url("borders/primary-toolbar-button-border-default-dark.png"),url("borders/primary-toolbar-button-border-default-dark@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
 }
-
 /* column-headers borders */
 column-header.button,
 column-header .button,
@@ -255,7 +246,7 @@ column-header.button:active:hover,
 column-header .button:active:hover,
 column-header .button.dnd {
     border-image: linear-gradient(to top,
-                                  mix(@borders, @theme_base_color, 0.5),
+                                  @borders,
                                   @theme_base_color
                                   ) 0 1 1 0;
 }
@@ -270,7 +261,7 @@ column-header:last-child .button:backdrop {
 column-header.button:insensitive,
 column-header .button:insensitive {
     border-image: linear-gradient(to top,
-                                  mix(@insensitive_borders, @insensitive_bg_color, 0.5),
+                                  @borders,
                                   @insensitive_bg_color
                                   ) 0 1 1 0;
 }
@@ -288,6 +279,8 @@ column-header:last-child .button:backdrop {
 
 
 /* unfocused window: generic element borders */
+.selection-mode.toolbar .suggested-action.button:backdrop, 
+.selection-mode.toolbar GtkToolButton.suggested-action .button:backdrop,
 .button:backdrop,
 .header-bar .button:active:backdrop:hover,
 .header-bar .button:backdrop:active,
@@ -296,27 +289,25 @@ column-header:last-child .button:backdrop {
 .header-bar .button:backdrop:insensitive,
 .header-bar .button:backdrop:hover,
 .header-bar .button:insensitive:backdrop,
-
 .spinbutton.vertical .button:backdrop,
 GtkComboBox.combobox-entry .entry:backdrop,
 GtkComboBox.combobox-entry .button:backdrop,
-
-
+.entry:backdrop,
 .inline-toolbar.toolbar.vertical .button:backdrop,
 .inline-toolbar.toolbar.vertical .button:backdrop:insensitive,
 .inline-toolbar.toolbar.vertical .button:backdrop:active,
 .suggested-action.button:backdrop, 
 .toolbar .suggested-action.button:backdrop,
 .destructive-action.button:backdrop {
-    border-image: -gtk-scaled (url("borders/generic-border-backdrop.png"),url("borders/generic-border-backdrop@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
-    border-radius: 4px;
+    border-image: -gtk-scaled (url("borders/generic-border-backdrop-dark.png"),url("borders/generic-border-backdrop-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
     border-color: transparent;
 }
 
 .trough row:backdrop {
-    border-image: -gtk-scaled (url("borders/nohl-generic-border-backdrop.png"),url("borders/nohl-generic-border-backdrop@2.png")) 3 / 3px stretch;
+    border-image: -gtk-scaled (url("borders/nohl-generic-border-backdrop-dark.png"),url("borders/nohl-generic-border-backdrop-dark@2.png")) 3 / 3px stretch;
     border-radius: 3px;
     border-width: 1px;
     border-style: solid;
@@ -331,11 +322,11 @@ GtkComboBox.combobox-entry .button:backdrop,
 .primary-toolbar GtkComboBox.combobox-entry .button:backdrop,
 .primary-toolbar GtkComboBox .button:backdrop,
 .primary-toolbar .entry:backdrop,
-
+.primary-toolbar GtkSwitch.trough:backdrop,
 .inline-toolbar.toolbar .button:backdrop,
 .inline-toolbar.toolbar .button:backdrop:insensitive,
 .inline-toolbar.toolbar .button:backdrop:active {
-    border-image: -gtk-scaled (url("borders/primary-toolbar-generic-border-backdrop.png"),url("borders/primary-toolbar-generic-border-backdrop@2.png")) 4 / 4px stretch;
+    border-image: -gtk-scaled (url("borders/primary-toolbar-generic-border-backdrop-dark.png"),url("borders/primary-toolbar-generic-border-backdrop-dark@2.png")) 4 / 4px stretch;
     border-radius: 3px;
     border-width: 2px;
     border-style: solid;
@@ -345,7 +336,7 @@ GtkComboBox.combobox-entry .button:backdrop,
 /* pushed colored buttons borders */
 .selection-mode.toolbar .suggested-action.button,
 .selection-mode.toolbar GtkToolButton.suggested-action .button {
-    border-image: -gtk-scaled (url("borders/generic-border-transparent.png"),url("borders/generic-border-transparent@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled (url("borders/generic-border-transparent-dark.png"),url("borders/generic-border-transparent-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 4px;
     border-width: 0px 0px 1px 0px;
     border-style: solid;
@@ -356,7 +347,7 @@ GtkComboBox.combobox-entry .button:backdrop,
 /* suggested action buttons borders */
 .suggested-action.button,
 .suggested-action.button:active {
-    border-image: -gtk-scaled(url("borders/button-border-suggested.png"),url("borders/button-border-suggested@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled(url("borders/button-border-suggested-dark.png"),url("borders/button-border-suggested-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;
@@ -366,7 +357,7 @@ GtkComboBox.combobox-entry .button:backdrop,
 /* destructive action buttons borders */
 .destructive-action.button,
 .destructive-action.button:active {
-    border-image: -gtk-scaled(url("borders/button-border-destructive.png"),url("borders/button-border-destructive@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
+    border-image: -gtk-scaled(url("borders/button-border-destructive-dark.png"),url("borders/button-border-destructive-dark@2.png")) 3 3 4 3 / 3px 3px 4px 3px stretch;
     border-radius: 3px;
     border-width: 1px 1px 2px 1px;
     border-style: solid;

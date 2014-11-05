@@ -2643,7 +2643,7 @@ GtkFileChooserButton GtkImage:last-child {
 	-GtkRange-trough-border: 0;
 	-GtkScrollbar-has-backward-stepper: false;
 	-GtkScrollbar-has-forward-stepper: false;
-	-GtkRange-slider-width: 10;
+	-GtkRange-slider-width: 13;
 	-GtkScrollbar-min-slider-length: 42; /* minimum size for the slider. sadly can't be in '.slider' where it belongs */
 
 	-GtkRange-stepper-spacing: 0;

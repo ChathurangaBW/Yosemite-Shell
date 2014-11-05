@@ -17,163 +17,6 @@
 */
 
 
-
-/*************
- * Slingshot *
- ************/
-
-.button.app {
-    border-width: 0;
-    border-radius: 5px;
-    box-shadow: none;
-}
-
-.app:hover {
-    background-color: alpha (#000, 0.08);
-}
-.app:focus {
-    background-color: alpha (#000, 0.20);
-}
- 
-.search-item {
-    border-width: 0;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-.search-item:hover,
-.search-item:focus {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-    text-shadow: 0 1px 1px alpha (#000, 0.25);
-    icon-shadow: 0 1px 1px alpha (#000, 0.25);
-}
- 
-.search-entry-large,
-.search-entry-large:focus {
-        border: none;
-        font: open sans light 18;
-        padding: 8px;
-        background-image: none;
-        background-color: transparent;
-        box-shadow: none;
-        border-radius: 0;
-}
- 
-.search-category-header {
-        color: #808080;
-}
-
-
-
-/********
-* Budgie/desktop *
-********/
-
-
-.budgie-panel {
-    background-color: alpha(white, 0.0);
-background-image: url("assets/background-noise-toolbar2.png"),
-                     -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (alpha ( #fff, 0.4)),
-                                     to   (alpha ( #fff, 0.05)));
-    border: 1px solid shade (#333, 0.4);
-    border-width: 1px  0 0 0;
-    box-shadow: inset 0 1px alpha (#fff, 0.35);
-}
-
-
-.budgie-panel GtkLabel, 
-.budgie-panel GtkImage{
-color: white;
-    text-shadow: 0 1px alpha (#000, 0.4);
-    icon-shadow: 0 1px alpha (#000, 0.4);
-}
-
-.budgie-panel .message-area {
-    background-color: transparent;
-    border-radius: 6px;
-
-
-}
-.budgie-panel .launcher {
-    border: 2px solid alpha(white, 0.0);
-    background-image: none;
-    transition: 100ms ease-in;
-}
-.budgie-panel .launcher:hover {
-    border: 2px solid alpha(white, 0.0);
-    border-bottom: 1px solid alpha(#4fb3ff, 0.3);
-background-image: 
-                     -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (alpha ( #4fb3ff, 0.01)),
-                                     to   (alpha ( #4fb3ff, 0.3)));
-  
-
-}
-.budgie-panel .launcher:active {
-    border: 2px solid alpha(white, 0.0);
-    border-bottom: 1px solid alpha (white, 0.4);
-
-
-}
-.top .launcher:hover {
-    border: 2px solid alpha(white, 0.0);
-    border-top: 2px solid alpha(white, 0.5); 
-}
-.top .launcher:active {
-    border: 2px solid alpha(white, 0.0);
-    border-top: 2px solid white;
-}
-.panel-applet {
-    background-image: none;
-
-    border-color: alpha(white, 0.12);
-    border-radius: 6px;
-    border: solid alpha(white, 0.1) 1px;
-
-}
-.budgie-panel .menu-icon,
-.budgie-panel .menu-icon:active,
-.budgie-panel .menu-icon:hover {
-    background-color: none;
-
-}
-
-BudgiePopover {
-    border-radius: 6px;
-    border: 1px solid shade (#333, 0.4);
-}
-
-
-PantheonTerminalPantheonTerminalWindow.background {
-   background-color: transparent;
- }
-
-/********
-* Geary *
-********/
-
-ConversationListView {
-    -GtkWidget-focus-line-width: 1px;
-    -GtkTreeView-grid-line-width: 0;
-}
- 
-ConversationListView.view.cell {
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: alpha (#000, 0.2);
-}
- 
-ConversationListView.view.cell:selected {
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: shade (@theme_selected_bg_color, 0.8);
-}
-
-
 /**************
  * GNOME Crap *
  *************/
@@ -234,9 +77,9 @@ BirdieWidgetsTweetList * {
 .album-list-view GtkLabel:backdrop,
 .album-list-view GraniteWidgetsRating {
     background-color: #262626;
-    color: #fff;
+    color: @selected_fg_color;
 
-    border-radius: 8;
+    border-radius: 0;
     border-color: #000;
 }
 
@@ -244,7 +87,7 @@ BirdieWidgetsTweetList * {
 .album-list-view GtkTreeView:backdrop {
     background-color: #262626;
     background-image: none;
-     color: #fff;
+    color: @selected_fg_color;
     -GtkTreeView-vertical-separator: 3;
     -GtkTreeView-grid-line-width: 0;
 }
@@ -291,19 +134,14 @@ BirdieWidgetsTweetList * {
 
 /*********
  * Panel *
- 
  ********/
 
 .panel {
-    background-color: white;
-    color: #333;
+    background-color: transparent;
+    color: #fff;
     font-weight: bold;
     text-shadow: 0 1px 2px alpha (#000, 0.6);
     icon-shadow: 0 1px 2px alpha (#000, 0.6);
-}
-
-.panel .menu .menuitem {
-    font-weight: normal;
 }
 
 .panel-shadow {

@@ -147,7 +147,7 @@
 
 @define-color inset_light_color alpha(white, 0.05);
 @define-color inset_dark_color alpha(black, 0.25);
-@define-color inset_dark_color2 alpha(black, 0.25);
+@define-color inset_dark_color2 alpha(black, 0.1);
 
 /**************************
  * Selection Mode classes *
