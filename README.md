@@ -1,6 +1,6 @@
-Yosemite Shell
+![image](https://github.com/chathurangabw/Yosemite-Shell/assets/4383991/832477e2-8127-4cc2-99ea-0ffe6adb0bc0)Yosemite Shell
 ==============
 
 OSX like GNOME Shell Theme 
-![alt tag](http://gnome-look.org/CONTENT/content-pre1/166200-1.jpg)
-![alt tag](http://gnome-look.org/CONTENT/content-pre2/166200-2.jpg)
+![alt tag](https://images.pling.com/img/00/00/34/74/76/1013055/166200-1.jpg)
+
