@@ -1,4 +1,4 @@
-![image](https://github.com/chathurangabw/Yosemite-Shell/assets/4383991/832477e2-8127-4cc2-99ea-0ffe6adb0bc0)Yosemite Shell
+Yosemite Shell
 ==============
 
 OSX like GNOME Shell Theme 
